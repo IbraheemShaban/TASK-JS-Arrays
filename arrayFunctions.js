@@ -90,14 +90,20 @@ function secondHalfOfArrayIfItIsEven(fruits) {
 function youGottaCalmDown(shout) {
   // Your code here
   let arr = [];
+  let exclamationPoint = false;
   let answer = '';
   for (let i = 0; i < shout.length; i++) {
     if (shout[i] != '!') {
       arr.push(shout[i]);
       answer += arr[i];
+    } else if (shout[i] == '!') {
+      exclamationPoint = true;
     }
   }
-  answer += '!';
+  if (exclamationPoint) {
+    answer += '!';
+  }
+
   return answer;
 }
 
